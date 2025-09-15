@@ -13,7 +13,7 @@ while condicao <= 10: #enquanto condicao for menor ou igual a 5
 
 #for é utilizado quando temos noção de quantas vezes queremos que determinada função se repita 
 
-for i in range (0, 11): #o i dentro do range de 0 a 11 lembrando que o zero é elemento contavel 
+for i in range (0, 11): #o i dentro do range é para ir contando de unidade em unidade de 0 a 11 lembrando que o zero é elemento contavel 
     print("Contador", i)
 
 palavra = "Python"

@@ -2,7 +2,7 @@ nota = int(input("Digite a sua nota: "))
 
 if nota >= 9:
     print("Ótima nota!")
-elif nota >= 7:
+elif nota >= 7: #elif é um "Se não", porém, um que podemos utilizar varias vezes sem prejudicar a semantica
     print("Boa nota!")
 else:
     print("Melhore suas notas!")
