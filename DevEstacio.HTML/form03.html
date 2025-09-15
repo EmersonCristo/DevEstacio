@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fomrulario 3.0</title>
+    <style>
+
+        body {
+            background-color: rgb(69, 67, 67);
+            color: white;
+        }
+
+
+        select, input {
+            margin: 10px 0;
+            padding: 10px;
+            border: 1px solid blue;
+            border-radius: 4px;
+        }
+
+        .simple button:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form method="post" class="simple">
+        <label for="idade">Idade</label>
+        <input type="number" id="idade" name="idade" min="1" max="100">
+        <br>
+        <br>
+
+        <label for="genero">Gênero</label>
+        <input type="radio" name="genero" value="M">Masculino
+        <input type="radio" name="genero" value="F">Feminino
+        <input type="radio" name="genero" value="Outros">Outros
+        <br>
+        <br>
+
+        <label for="Interesses">Interesses:</label>
+        <input type="checkbox" name="interesses" value="html">HTML
+        <input type="checkbox" name="interesses" value="css">CSS
+        <br>
+        <br>
+
+        <label for="estados">Estado</label>
+        <select name="estado" id="estado">
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+        </select>
+        <br>
+        <br>
+
+        <label for="mensagem">Mensagem</label>
+        <br>
+        <textarea name="texto" id="texto" rows="8" cols="30" maxlength="40" minlength="5"></textarea>
+        <br>
+        <br>
+
+        <button type="submit">Enviar</button>
+        <button type="reset">Limpar dados</button>
+    </form>
+</body>
+</html>

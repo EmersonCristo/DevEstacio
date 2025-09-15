@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .caixa {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+ 
+        .ativo {
+            background-color: darkred;
+        }
+ 
+        .inativo {
+            background-color: none;
+        }
+ 
+        .verde {
+            background-color: green;
+        }
+    </style>
+</head>
+<body>
+    <div id="meuDiv" class="caixa">Esta é a minha div</div>
+    <button id="botao">Alternar classe</button>
+ 
+    <script>
+       const elemento = document.getElementById("meuDiv");
+       const botao = document.getElementById("botao");
+
+       botao.addEventListener('click',function(){
+        const classParaClicar = {
+            'caixa' : 'ativo',
+            'ativo' : 'inativo',
+            'inativo' : 'verde',
+            'verde' : 'caixa',
+ 
+        };
+        elemento.className = classParaClicar[elemento.className]  || 'caixa';
+       });
+       
+    </script>
+ 
+</body>
+</html>

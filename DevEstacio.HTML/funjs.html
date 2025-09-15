@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Função</title>
+    <style>
+        .caixa {
+            width: 200px;
+            height: 200px;
+            background-color: lightblue;
+        }
+
+        .ativo {
+            background-color: darkred;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="meuDiv" class="caixa">Está é minha caixa.</div> <!-- Definindo uma DIV com ID -->
+    <button onclick="adicionarClasse()">Adicionar Classe</button> <!-- Adicionando evento adicionarClasse-->
+    <button onclick="removerClasse()">Remover Classe</button> <!-- Adicionando a função removerClasse-->
+    <button onclick="altenarClasse()">Alterar Classe</button>
+
+    <script>
+
+        function adicionarClasse() {
+            document.getElementById("meuDiv").classList.add("ativo");
+            // Adiciona a classe ativo na Div
+        }
+
+        function removerClasse() {
+            document.getElementById("meuDiv").classList.remove("ativo");
+            // Remove a classe ativo da Div
+        }
+
+        function alterarClasse() {
+            let elemento = documento.getElementById("meuDiv");
+            elemento.classList.toggle("ativo");
+        }
+    </script>
+</body>
+</html>
