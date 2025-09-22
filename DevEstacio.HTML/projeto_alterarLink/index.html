@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documento</title>
+</head>
+<body>
+    <a id="meuLink" href="https://studioghibli.com.br/studioghibli/?srsltid=AfmBOor5x1aIEI4lpVd8ysRy-4ulrKzp9GlmKVpZgmWs7EyhbAH-gfOT" target="_blank">Visite o site</a>
+
+    <button onclick="alterarLink()">Alterar Link</button>
+
+    <script>
+        function alterarLink(){
+            let link = document.getElementById('meuLink')
+            link.hred = ''
+            link.innerText = "Visitar outro site"
+        }
+    </script>
+</body>
+</html>

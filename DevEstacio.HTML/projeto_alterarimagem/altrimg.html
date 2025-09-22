@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alterar imagem</title>
+</head>
+<body>
+    <img id="minhaImagem" src="image.png" alt="imagem1">
+    <button onclick="alterarImagem()">Alterar Imagem</button>
+
+    <script>
+        function alterarImagem(){
+            let imagem = document.getElementById('minha Imagem')
+            imagem.src = "image2.png";
+            imagem.alt = "imagem alterada";
+        }
+    </script>
+</body>
+</html>
