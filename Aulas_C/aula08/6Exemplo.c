@@ -3,18 +3,18 @@
 int main() {
     float media = 8.5;
     int frequencia = 90; // Em percentual
- 
+
     // Condição: Se (média >= 7.0) E (frequência >= 75)
     if (media >= 7.0 && frequencia >= 75) {
         printf("Aluno APROVADO! Parabéns!\n");
     } else {
         printf("Aluno REPROVADO. É necessário verificar notas ou faltas.\n");
     }
-   
+
     // Testando um cenário reprovado (média boa, mas falta)
     media = 9.0;
     frequencia = 60;
-   
+
     printf("\n--- Novo Teste ---\n");
     if (media >= 7.0 && frequencia >= 75) {
         printf("Aluno APROVADO! Parabéns!\n");
@@ -22,7 +22,7 @@ int main() {
         // Esta será a saída, pois a segunda condição (frequência) é falsa.
         printf("Aluno REPROVADO. É necessário verificar notas ou faltas.\n");
     }
- 
+
     return 0;
 }
 
