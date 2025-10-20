@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicios</title>
+</head>
+<body>
+    <h2>Coletando dados</h2>
+    <form id="formula">
+        Nome: <input type="text" id="name" required><br><br>
+        Idade: <input type="number" id="age" required><br><br>
+        <button type="button" onclick="clicou()">REGISTRAR</button>
+        <p id="resultado"></p> <!--Apenas para imprimir o resultado-->
+    </form>
+
+    <script>
+        function clicou() {
+
+        name = document.getElementById("name").value;
+        age = Number(document.getElementById("age").value); //convertendo para number
+        resultado = document.getElementById("resultado") // resultado vai receber o proprio p, que sera usado apenas para imprimir o resultado sem a necessidade de um alert
+
+            if (isNaN(age)) { //verificando se o resultado que está na variavel age realmente é um tipo númerico 
+                resultado.innerText = "Digite um número válido";
+                resultado.style.color = "red"; // estilizando o texto caso o resultado seja diferente de um tipo númerico
+            }
+            if (age < 18) {
+                // alert("Menor de idade!")
+                resultado.innerText = "Você é menor de idade!"
+            } else {
+                // alert("Maior de idade!"):
+                resultado.innerText = "Você é maior de idade!"
+                //variavel,mais o innerText, é meio que para escrever sobre o local da variável outro dado
+            }
+        }
+    </script>
+</body>
+</html>

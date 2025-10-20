@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Descontos</title>
+</head>
+<body>
+    <h3>Digite o valor da compra abaixo</h3>
+    <form action="">
+        Valor: <input type="number" id="value"><br>
+        <button type="button" onclick="clicou()">Registrar</button>
+    </form>
+
+    <script>
+        function clicou() {
+
+            let preco = document.getElementById("value").value
+            let desconto = 10
+            let precodes = preco * (desconto / 100)
+            let precofin = preco - desconto
+
+            if (preco > 100){
+                alert("Preço original: R$", preco);
+        }
+    }
+    </script>
+</body>
+</html>

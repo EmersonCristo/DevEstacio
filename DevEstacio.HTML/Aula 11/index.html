@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario tabela</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulário de inserção</h2>
+    <form id="userForm">
+        Nome: <input type="text" name="" id="name" required><br><br>
+        Idade: <input type="number" name="" id="age" required><br><br>
+        <button type="button" onclick="addRow()">Adicionar a tabela</button>
+    </form>
+    <h2>Tabela de Dados</h2>
+    <table id="dataTable">
+        <thead>
+            <tr> <!--Primeira linha da coluna, onde vai ficar o cabeçalho da tabela-->
+                <th>Nome</th>
+                <th>Idade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- O que for adicionado no formulario vai aparecer aqui -->
+        </tbody>
+
+        <script>
+            function addRow(){
+                //obter os dados do formulário 
+                let name = document.getElementById("name").value; //guardando na variavel name o valor escrito no input de id name
+                let age = document.getElementById("age").value;
+
+                if(name && age) { //nesse formato está verificando se ambos os campos foram preenchidos 
+                    let table = document.getElementById("dataTable").getElementsByTagName("tbody")[0]; //seleciona a tabela pelo id, E pega o primeiro tbody
+                    let newRow = table.insetRow() //cria uma nova linha dentro do tbody
+                    let cell1 = newRow.insertCell(0); // Primeira célula coluna nome
+                    let cell2 = newRow.insertCell(1); // Segunda célula coluna idade
+
+                    // Adiciona o texto de cada campo nas respectivas células
+                    cell1.textContent = name;
+                    cell2.textContent = age;
+
+                    document.getElementById("userForm").reset(); //resetar o formulario inteiro puxando pelo id do próprio
+                } else {
+                    // caso algum campo não esteja preenchido, exibe um alerta
+                    alert("Por favor, preencha todos os campos!")
+                }
+            }
+        </script>
+    </table>
+</body>
+</html>
