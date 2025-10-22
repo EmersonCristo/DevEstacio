@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de número</title>
+</head>
+<body>
+    <h2>Contador de número</h2>
+    <div id="numberContainer"></div>
+    <!-- Exemplo de repetições com for no java script -->
+    <script>
+
+        let container = document.getElementById("numberContainer") // varialvel container recebendo a si própria para podermos utilizala 
+
+        for (let i = 1; i <= 10; i++) {
+            let p = document.createElement("p"); // criando um elemento de uma tag html p, que significa paragrafo
+            p.textContent = `Número ${i}`; // adicionando no paragrafo o elemento de i 
+            container.appendChild(p); // adicionando o paragrafo dentro do container
+        }
+    </script>
+</body>
+</html>

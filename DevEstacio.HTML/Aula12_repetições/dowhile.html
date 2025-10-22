@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do</title>
+</head>
+<body>
+    <h2>Contador de número</h2>
+    <div id="numberContainer"></div>
+
+    <script>
+        let container = document.getElementById("numberContainer");
+        let i = 1;
+
+        do { //do significa faça 
+            let p = document.createElement("p");
+            p.textContent = `Numero ${i}`
+            container.appendChild(p); // dentro do container adicione o p 
+            i++;
+        } while (i <= 10) // com a estrutura do, o laço deve ser feito após o exercicio que deve ser realizado, lembrando que o while significa enquanto
+        
+        //a diferença do do while, para o for, é que o do while sempre vai fazer o código ao menos 1 vez, por conta da condição sempre estar depois do código
+
+
+
+
+        // PARA FAZER SOMENTE COM O WHILE
+
+        //SE TROUXERMOS O WHILE PARA CIMA E A CONDIÇÃO FOR FALSA, ELA NÃO SERA EXECUTADA COMO NO CASO A CIMA DO DO E WHILE DEPOIS 
+
+        while (i <= 10) { //do significa faça 
+
+            let p = document.createElement("p");
+            p.textContent = `Numero ${i}`
+            container.appendChild(p); // dentro do container adicione o p 
+            i++;
+        } 
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela</title>
+</head>
+<body>
+    <h2>Tabela de multiplicação</h2>
+    <table id="multiplicacaoTabela">
+        <!-- Meus dados da minha tabela -->
+    </table>
+
+    <script>
+        let table = document.getElementById("multiplicacaoTabela");
+        for (let i; i <= 10; i++) {
+            let row = table.insertRow(); // variavel row, recebe uma nova linha na tabela, row é linha em inglês
+
+            for(let j; j <=2; j++) {
+                let cell = row.insertCell(); // adicionando uma nova célula em row 
+                cell.textContent = i * j; // adicionando a multiplicação entre i * j nos texto da variavel cell 
+            }
+            
+        }
+    </script>
+</body>
+</html>

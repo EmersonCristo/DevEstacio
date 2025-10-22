@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contador de cliques</title>
+</head>
+<body>
+    <!-- <h1>Contador de cliques</h1>
+    <button id="botao" onclick="clicou()">É só clicar</button>
+    <div id="texto"></div>
+
+    <script>
+        let container = document.getElementById("texto")
+
+        function clicou() {
+            for (contador = 1; contador <= 100; contador++) {
+
+                p.textContent = `Clicou um total de ${contador}, vezes.`;
+                container.appendChild(p)
+            }
+        }
+    </script> -->
+
+    <!-- ESSE MODELO A CIMA FOI FEITO POR MIM, ABAIXCO VIRA O DO COLEGA DE CLASSE -->
+
+    <!-- <h2>Contador de cliques</h2>
+    <button id="btnContar">Clique</button>
+    <p id="contador">número de cliques: 0</p>
+
+    <script>
+        let contador = 0;
+        let botao = document.getElementById("btnContar");
+        let textoContador = document.getElementById("contador");
+
+        botao.addEventListener("click", function() { // Nessa linha está adicionando o evento do click 
+            
+            contador++; // no contador é adicionado mais 1
+
+            textoContador.textContent = `Número de cliques: ${contador}`;
+
+            if (contador >= 10) {
+        }
+        });
+    </script> -->
+
+    <!-- AGORA O EXEMPLAR FEITO PELO PROFESSOR -->
+
+        <h2>Contador de cliques</h2>
+    <button onclick="contarClique()">Clique</button>  <!--professor adicionou um contar click-->
+    <p id="contador">Número de cliques: 0</p>
+
+    <script>
+
+        let contador = 0;
+        let textoContador = document.getElementById("contador");
+
+        function contarClique() { // adicionamos a função contarCliques que é disparada ao acionar o botão 
+            for (let i = 0; i < 1; i++) { // for anunciado da questão 
+                contador++
+            }
+
+            if (contador >= 10) {
+                textoContador.textContent = "Número de cliques excedido";
+                return; // se o contador for maior ou igual a 10, nos saimos da função com números excedidos, e precisamos de um return para mandar isso ao usuario 
+            }
+
+            textoContador.textContent = `Número de cliques: ${contador}`;
+        }
+    </script>
+
+</body>
+</html>
